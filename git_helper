@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# A helper script to perform various git operations
+
+function clean_repo() {
+    echo -e "${YELLOW}Cleaning the repo by removing untracked files...${NC}"
+    git clean -df
+}
+
+function discard_changes() {
+    echo -e "${YELLOW}Discarding all local changes...${NC}"
+    git restore .
+}
+
+function remove_last_commit() {
+    echo -e "${YELLOW}Removing the last commit...${NC}"
+    git reset HEAD~1
+}
+
+function reset_to_commit() {
+    if [ -z "$1" ]; then
+        echo -e "${RED}Error: Please provide a commit hash.${NC}"
+        exit 1
+    fi
+    echo -e "${YELLOW}Resetting to commit: ${GREEN}$1${NC}"
+    git reset --hard "$1"
+}
+
+function usage() {
+    echo -e "${GREEN}Usage: $0 {clean_repo|discard_changes|remove_last_commit|reset_to_commit <commit_hash>}${NC}"
+    exit 1
+}
+
+if [ $# -lt 1 ]; then
+    usage
+fi
+
+case "$1" in
+    clean_repo)
+        clean_repo
+        ;;
+    discard_changes)
+        discard_changes
+        ;;
+    remove_last_commit)
+        remove_last_commit
+        ;;
+    reset_to_commit)
+        shift
+        reset_to_commit "$@"
+        ;;
+    *)
+        usage
+        ;;
+esac
+
