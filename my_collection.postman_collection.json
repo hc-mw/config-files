@@ -1,0 +1,1232 @@
+{
+	"info": {
+		"_postman_id": "8fbe9bda-090a-4a16-b3cb-36956cac54f2",
+		"name": "My Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36234663"
+	},
+	"item": [
+		{
+			"name": "rum",
+			"item": [
+				{
+					"name": "getPresignedUrl",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "eyJmaWxlTmFtZXMiOlsibWFpbi5qcy5tYXAiXSwidmVyc2lvbiI6IjEuMC4wIn0=",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "{{URL}}/rum/getSasUrl"
+					},
+					"response": []
+				},
+				{
+					"name": "demo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/rum/get?key=rum-sourcemap/dpluz/dpluz/latest/main.5d5cae66.js.map",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"rum",
+								"get"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "rum-sourcemap/dpluz/dpluz/latest/main.5d5cae66.js.map"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agent",
+			"item": [
+				{
+					"name": "setting",
+					"item": [
+						{
+							"name": "config-groups",
+							"item": [
+								{
+									"name": "add hosts to group",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"hostIds\": [\"wrkm\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{URL}}/agent/setting/config-groups/null%20void"
+									},
+									"response": []
+								},
+								{
+									"name": "config-groups",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/agent/setting/config-groups?fetchHostIds=false&agent_type=host&recordsPerPage=10&page=1&searchQuery=",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"agent",
+												"setting",
+												"config-groups"
+											],
+											"query": [
+												{
+													"key": "fetchHostIds",
+													"value": "false"
+												},
+												{
+													"key": "agent_type",
+													"value": "host"
+												},
+												{
+													"key": "recordsPerPage",
+													"value": "10"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "searchQuery",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create new config class",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": \"eyJjbG9uZV9sb2dfYXR0cmlidXRlc19zZXR0aW5ncyI6bnVsbCwiZGFyd2luIjp7ImFnZW50X3Jlc3RhcnRfc3RhdHVzIjp0cnVlLCJlbmhhbmNlX2pzb25fbG9ncyI6ZmFsc2UsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjp0cnVlLCJtYXhfbG9nX3NpemUiOiIxTWlCIiwibWlkZGxld2FyZV9hZ2VudF9sb2dzIjp0cnVlLCJtb25nb2RiX2NvbmZpZyI6e30sIm15c3FsX2NvbmZpZyI6e30sInBvc3RncmVzX2NvbmZpZyI6e30sInByb21ldGhldXNfY29uZmlnIjp7fSwicmVkaXNfY29uZmlnIjp7fX0sImRhdGFfbWFza2luZ19zZXR0aW5ncyI6bnVsbCwiZW5oYW5jZV9qc29uX2xvZ3MiOm51bGwsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjpudWxsLCJrOHMiOnsiYWdlbnRfcmVzdGFydF9zdGF0dXMiOnRydWUsImRhZW1vbnNldCI6ZmFsc2UsImRlcGxveW1lbnQiOmZhbHNlLCJlbmhhbmNlX2pzb25fbG9ncyI6ZmFsc2UsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjp0cnVlLCJtYXhfbG9nX3NpemUiOiIxTWlCIiwibWV0cmljc19pbmdlc3Rpb24iOnRydWUsIm1pZGRsZXdhcmVfYWdlbnRfbG9ncyI6dHJ1ZSwidHJhY2VzX2luZ2VzdGlvbiI6dHJ1ZX0sImxpbnV4Ijp7ImFnZW50X3Jlc3RhcnRfc3RhdHVzIjp0cnVlLCJjYXNzYW5kcmFfY29uZmlnIjp7fSwiY2xpY2tob3VzZV9jb25maWciOnt9LCJlbGFzdGljc2VhcmNoX2NvbmZpZyI6e30sImVuaGFuY2VfanNvbl9sb2dzIjp0cnVlLCJpbmZyYXN0cnVjdHVyZV9maWxlX2Jhc2VfbG9ncyI6dHJ1ZSwibWF4X2xvZ19zaXplIjoiMU1pQiIsIm1ldHJpY3NfaW5nZXN0aW9uIjp0cnVlLCJtaWRkbGV3YXJlX2FnZW50X2xvZ3MiOnRydWUsIm1vbmdvZGJfY29uZmlnIjp7fSwibXlzcWxfY29uZmlnIjp7fSwicG9zdGdyZXNfY29uZmlnIjp7fSwicHJvbWV0aGV1c19jb25maWciOnt9LCJyZWRpc19jb25maWciOnt9LCJyZWRwYW5kYV9jb25maWciOnt9LCJ0cmFjZXNfaW5nZXN0aW9uIjp0cnVlLCJkYXRhX21hc2tpbmdfc2V0dGluZ3MiOltdLCJjbG9uZV9sb2dfYXR0cmlidXRlc19zZXR0aW5ncyI6W3sic291cmNlQXR0cmlidXRlS2V5IjoiYSIsIm5ld0F0dHJpYnV0ZUtleSI6ImFhIn1dfSwibWV0cmljc19pbmdlc3Rpb24iOm51bGwsIm1pZGRsZXdhcmVfYWdlbnRfbG9ncyI6bnVsbCwidHJhY2VzX2luZ2VzdGlvbiI6bnVsbCwid2luZG93cyI6eyJhZ2VudF9yZXN0YXJ0X3N0YXR1cyI6dHJ1ZSwiY2Fzc2FuZHJhX2NvbmZpZyI6e30sImNsaWNraG91c2VfY29uZmlnIjp7fSwiZWxhc3RpY3NlYXJjaF9jb25maWciOnt9LCJlbmhhbmNlX2pzb25fbG9ncyI6ZmFsc2UsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjp0cnVlLCJtYXhfbG9nX3NpemUiOiIxTWlCIiwibW9uZ29kYl9jb25maWciOnt9LCJteXNxbF9jb25maWciOnt9LCJwb3N0Z3Jlc19jb25maWciOnt9LCJwcm9tZXRoZXVzX2NvbmZpZyI6e30sInJlZGlzX2NvbmZpZyI6e30sInJlZHBhbmRhX2NvbmZpZyI6e30sIndpbmRvd3NfZXZlbnRfbG9nX2NvbmZpZyI6e319fQ==\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{URL}}/agent/setting/config-groups/class0"
+									},
+									"response": []
+								},
+								{
+									"name": "get class config",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{URL}}/agent/setting/config-groups/8"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "setting",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var template = `",
+											"<style type=\"text/css\">",
+											"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+											"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+											"    .tftable tr {background-color:#ffffff;}",
+											"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+											"    .tftable tr:hover {background-color:#e0ffff;}",
+											"</style>",
+											"",
+											"<table class=\"tftable\" border=\"1\">",
+											"    <tr>",
+											"        <th>Setting</th>",
+											"        <th>Status</th>",
+											"    </tr>",
+											"    <tr>",
+											"        <td>ID: {{response.setting.id}}<br>Account ID: {{response.setting.account_id}}<br>Host ID: {{response.setting.host_id}}<br>Token: {{response.setting.token}}<br>Config: {{JSON.stringify(response.setting.config)}}<br>Meta Data: {{response.setting.meta_data}}<br>Created At: {{response.setting.created_at}}<br>Updated At: {{response.setting.updated_at}}<br>Project ID: {{response.setting.project_id}}<br>Config Null: {{JSON.stringify(response.setting.config_null)}}<br>Meta Data Null: {{JSON.stringify(response.setting.meta_data_null)}}<br>Group ID: {{JSON.stringify(response.setting.group_id)}}</td>",
+											"        <td>{{response.status}}</td>",
+											"    </tr>",
+											"</table>",
+											"`;",
+											"",
+											"function constructVisualizerPayload() {",
+											"    return { response: pm.response.json() }",
+											"}",
+											"",
+											"pm.visualizer.set(template, constructVisualizerPayload());"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "accept-language",
+										"value": "en-US,en;q=0.9"
+									},
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjQyLCJBY2NvdW50SWQiOjIzLCJBY2NvdW50VUlEIjoieWV0b3QiLCJBdXRoVHlwZSI6IiIsIlByb2plY3RJZCI6MjUsIlByb2plY3RVaWQiOiJ5ZXRvdCIsIkFsaWFzIjoieWV0b3QiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA2LTIyVDA5OjU4OjUxLjA1MTc0MzQ0M1oiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.AK5y3P3WJLroAwCR16VO_zgmQpm2hM41ojw9rboIADc",
+										"disabled": true
+									},
+									{
+										"key": "client_time_zone",
+										"value": "Asia/Calcutta"
+									},
+									{
+										"key": "client_time_zone_offset",
+										"value": "+0530"
+									},
+									{
+										"key": "cookie",
+										"value": "cookieyes-consent=consentid:SFhRRFgzMHliVW9KNkloTHEwbGRGYWVuSEVHZTk2UnI,consent:yes,action:no,necessary:yes,functional:yes,analytics:yes,performance:yes,advertisement:yes,other:yes; ph_phc_TXdpocbGVeZVm5VJmAsHTMrCofBQu3e0kN8HGMNGTVW_posthog=%7B%22distinct_id%22%3A%22018e3805-78a7-770a-9e4c-941511586048%22%2C%22%24sesid%22%3A%5B1718598567795%2C%2201902475-05de-7659-95be-26c4d4b6fbf6%22%2C1718598567389%5D%7D; __admin___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjQyLCJBY2NvdW50SWQiOjIzLCJBY2NvdW50VUlEIjoieWV0b3QiLCJBdXRoVHlwZSI6IiIsIlByb2plY3RJZCI6MjUsIlByb2plY3RVaWQiOiJ5ZXRvdCIsIkFsaWFzIjoieWV0b3QiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA2LTIyVDA5OjU4OjUxLjA1MTc0MzQ0M1oiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.AK5y3P3WJLroAwCR16VO_zgmQpm2hM41ojw9rboIADc"
+									},
+									{
+										"key": "mw_user_session_id",
+										"value": "CGMsgXN"
+									},
+									{
+										"key": "priority",
+										"value": "u=1, i"
+									},
+									{
+										"key": "referer",
+										"value": "https://yetot.stage.env.middleware.io/settings/ingestion-controls?from_ts=1723090320000&to_ts=1723093920000&range=1h"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Linux\""
+									},
+									{
+										"key": "sec-fetch-dest",
+										"value": "empty"
+									},
+									{
+										"key": "sec-fetch-mode",
+										"value": "cors"
+									},
+									{
+										"key": "sec-fetch-site",
+										"value": "same-origin"
+									},
+									{
+										"key": "user-agent",
+										"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/agent/setting/minikube?agent_type=k8s",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"agent",
+										"setting",
+										"minikube"
+									],
+									"query": [
+										{
+											"key": "agent_type",
+											"value": "k8s"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "setting",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "accept-language",
+										"value": "en-US,en;q=0.9"
+									},
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImFscXJ6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJhbHFyeiIsIkFsaWFzIjoiYWxxcnoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTEyLTExVDA1OjQ4OjQ3LjEzMTc1MDk0OVoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.M8KOiRkg_68vGGMGICVrC3IZIjBJmnYBYIFvWpqJBDo"
+									},
+									{
+										"key": "client_time_zone",
+										"value": "Asia/Calcutta"
+									},
+									{
+										"key": "client_time_zone_offset",
+										"value": "+0530"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "cookie",
+										"value": "__mw___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImFscXJ6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJhbHFyeiIsIkFsaWFzIjoiYWxxcnoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTEyLTExVDA1OjQ4OjQ3LjEzMTc1MDk0OVoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.M8KOiRkg_68vGGMGICVrC3IZIjBJmnYBYIFvWpqJBDo; ext_name=ojplmecpdpgccookcobabopnaifgidhf"
+									},
+									{
+										"key": "mw_user_session_id",
+										"value": "r13G0cA"
+									},
+									{
+										"key": "origin",
+										"value": "https://alqrz.mw.lc"
+									},
+									{
+										"key": "priority",
+										"value": "u=1, i"
+									},
+									{
+										"key": "referer",
+										"value": "https://alqrz.mw.lc/settings/ingestion-controls?live=true&from_ts=1734695160000&to_ts=1734696060000&range=15m"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99\""
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Linux\""
+									},
+									{
+										"key": "sec-fetch-dest",
+										"value": "empty"
+									},
+									{
+										"key": "sec-fetch-mode",
+										"value": "cors"
+									},
+									{
+										"key": "sec-fetch-site",
+										"value": "same-origin"
+									},
+									{
+										"key": "user-agent",
+										"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"className\": \"default\", \n    \"value\": \"eyJkYXJ3aW4iOnsiYWdlbnRfcmVzdGFydF9zdGF0dXMiOnRydWUsImVuaGFuY2VfanNvbl9sb2dzIjpmYWxzZSwiaW5mcmFzdHJ1Y3R1cmVfZmlsZV9iYXNlX2xvZ3MiOnRydWUsIm1heF9sb2dfc2l6ZSI6IjFNaUIiLCJtaWRkbGV3YXJlX2FnZW50X2xvZ19wYXRocyI6WyIvdmFyL2xvZy8qKi8qLmxvZyoiLCIvdmFyL2xpYi9kb2NrZXIvY29udGFpbmVycy8qKi8qLmxvZyoiXSwibWlkZGxld2FyZV9hZ2VudF9sb2dzIjp0cnVlLCJtb25nb2RiX2NvbmZpZyI6e30sIm15c3FsX2NvbmZpZyI6e30sInBvc3RncmVzX2NvbmZpZyI6e30sInByb21ldGhldXNfY29uZmlnIjp7fSwicmVkaXNfY29uZmlnIjp7fX0sIms4cyI6eyJhZ2VudF9yZXN0YXJ0X3N0YXR1cyI6dHJ1ZSwiZGFlbW9uc2V0IjpmYWxzZSwiZGVwbG95bWVudCI6ZmFsc2UsImVuaGFuY2VfanNvbl9sb2dzIjpmYWxzZSwiaW5mcmFzdHJ1Y3R1cmVfZmlsZV9iYXNlX2xvZ3MiOnRydWUsIm1heF9sb2dfc2l6ZSI6IjFNaUIiLCJtZXRyaWNzX2luZ2VzdGlvbiI6dHJ1ZSwibWlkZGxld2FyZV9hZ2VudF9sb2dfcGF0aHMiOlsiL3Zhci9sb2cvcG9kcy8qLyovKi5sb2ciXSwibWlkZGxld2FyZV9hZ2VudF9sb2dzIjp0cnVlLCJ0cmFjZXNfaW5nZXN0aW9uIjp0cnVlfSwibGludXgiOnsiYWdlbnRfcmVzdGFydF9zdGF0dXMiOnRydWUsImNhc3NhbmRyYV9jb25maWciOnt9LCJjbGlja2hvdXNlX2NvbmZpZyI6e30sImNsb25lX2xvZ19hdHRyaWJ1dGVzX3NldHRpbmdzIjpbXSwiZGF0YV9tYXNraW5nX3NldHRpbmdzIjpbXSwiZWxhc3RpY3NlYXJjaF9jb25maWciOnt9LCJlbmhhbmNlX2pzb25fbG9ncyI6ZmFsc2UsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjp0cnVlLCJtYXhfbG9nX3NpemUiOiIxTWlCIiwibWV0cmljc19pbmdlc3Rpb24iOnRydWUsIm1pZGRsZXdhcmVfYWdlbnRfbG9nX3BhdGhzIjpbXSwibWlkZGxld2FyZV9hZ2VudF9sb2dzIjp0cnVlLCJtb25nb2RiX2NvbmZpZyI6e30sIm15c3FsX2NvbmZpZyI6e30sInBvc3RncmVzX2NvbmZpZyI6e30sInByb21ldGhldXNfY29uZmlnIjp7fSwicmVkaXNfY29uZmlnIjp7fSwicmVkcGFuZGFfY29uZmlnIjp7fSwicmVnZXhlc190b19maWx0ZXJfbG9ncyI6WyJbKD9QPGRhdGU+LispXSBbKD9QPHByb2Nlc3NfaWQ+LispXSBbKD9QPGxldmVsPi4qKV0gKD9QPGxvZ19tZXNzYWdlPi4rKSJdLCJ0cmFjZXNfaW5nZXN0aW9uIjp0cnVlfSwid2luZG93cyI6eyJhZ2VudF9yZXN0YXJ0X3N0YXR1cyI6dHJ1ZSwiY2Fzc2FuZHJhX2NvbmZpZyI6e30sImNsaWNraG91c2VfY29uZmlnIjp7fSwiZWxhc3RpY3NlYXJjaF9jb25maWciOnt9LCJlbmhhbmNlX2pzb25fbG9ncyI6ZmFsc2UsImluZnJhc3RydWN0dXJlX2ZpbGVfYmFzZV9sb2dzIjp0cnVlLCJtYXhfbG9nX3NpemUiOiIxTWlCIiwibW9uZ29kYl9jb25maWciOnt9LCJteXNxbF9jb25maWciOnt9LCJwb3N0Z3Jlc19jb25maWciOnt9LCJwcm9tZXRoZXVzX2NvbmZpZyI6e30sInJlZGlzX2NvbmZpZyI6e30sInJlZHBhbmRhX2NvbmZpZyI6e30sIndpbmRvd3NfZXZlbnRfbG9nX2NvbmZpZyI6e319fQ==\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}/agent/setting/wrkm"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "hosts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImlybWtmIiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJpcm1rZiIsIkFsaWFzIjoiaXJta2YiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI1LTAyLTE3VDEwOjQ1OjQyLjE3NjAwODUzNloiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.5PD_QXDYZzAXxqDIKuJNtbhOAUWKix5ms--1k02_FKw"
+							},
+							{
+								"key": "client_time_zone",
+								"value": "Asia/Calcutta"
+							},
+							{
+								"key": "client_time_zone_offset",
+								"value": "+0530"
+							},
+							{
+								"key": "mw_user_session_id",
+								"value": "kAPyZIZ"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "https://irmkf.mw.lc/settings/ingestion-controls?live=true&from_ts=1739788140000&to_ts=1739791740000&range=1h"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "https://irmkf.mw.lc/api/v1/agent/hosts?shouldGetK8sClusters=false&page=1&recordsPerPage=10",
+							"protocol": "https",
+							"host": [
+								"irmkf",
+								"mw",
+								"lc"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agent",
+								"hosts"
+							],
+							"query": [
+								{
+									"key": "shouldGetK8sClusters",
+									"value": "false"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "recordsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "searchQuery",
+									"value": "mi",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ingestion-rules",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <caption>Configuration Details</caption>",
+									"    <tr>",
+									"        <th>Configuration Type</th>",
+									"        <th>Details</th>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Apache Config</td>",
+									"        <td>{{response.apache_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>AWS Config</td>",
+									"        <td>{{response.aws_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Cassandra Config</td>",
+									"        <td>{{response.cassandra_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>ClickHouse Config</td>",
+									"        <td>{{response.clickhouse_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Config</td>",
+									"        <td>{{response.config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Elasticsearch Config</td>",
+									"        <td>{{response.elasticsearch_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Journald Config</td>",
+									"        <td>{{response.journald_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Kafka Config</td>",
+									"        <td>{{response.kafka_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>MongoDB Config</td>",
+									"        <td>{{response.mongodb_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>MySQL Config</td>",
+									"        <td>{{response.mysql_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>OracleDB Config</td>",
+									"        <td>{{response.oracledb_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>PGDB Config</td>",
+									"        <td>{{response.pgdb_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Prometheus Config</td>",
+									"        <td>{{response.prometheus_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Redis Config</td>",
+									"        <td>{{response.redis_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Redpanda Config</td>",
+									"        <td>{{response.redpanda_config}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Status</td>",
+									"        <td>{{response.status}}</td>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>Windows Event Log Config</td>",
+									"        <td>{{response.windows_event_log_config}}</td>",
+									"    </tr>",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return {response: pm.response.json()}",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/agent/ingestion-rules/{{agentToken}}?agent_version=1.12.0&host_id=minikube&platform=k8s",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"agent",
+								"ingestion-rules",
+								"{{agentToken}}"
+							],
+							"query": [
+								{
+									"key": "agent_version",
+									"value": "1.12.0"
+								},
+								{
+									"key": "host_id",
+									"value": "minikube"
+								},
+								{
+									"key": "platform",
+									"value": "k8s"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restart-status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/agent/restart-status/nzdftcqbmjxyvanvmywvsiknvyhhhzeosary?platform=k8s&host_id=minikube",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"agent",
+								"restart-status",
+								"nzdftcqbmjxyvanvmywvsiknvyhhhzeosary"
+							],
+							"query": [
+								{
+									"key": "platform",
+									"value": "k8s"
+								},
+								{
+									"key": "host_id",
+									"value": "minikube"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer pzsyitxqwdhuldzzzsgkmadpxdeekfvmfirl"
+							}
+						],
+						"url": "{{URL}}/auth"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Builder",
+			"item": [
+				{
+					"name": "Widget",
+					"item": [
+						{
+							"name": "data",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "accept-language",
+										"value": "en-US,en;q=0.9"
+									},
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjQyLCJBY2NvdW50SWQiOjIzLCJBY2NvdW50VUlEIjoieWV0b3QiLCJBdXRoVHlwZSI6IiIsIlByb2plY3RJZCI6MjUsIlByb2plY3RVaWQiOiJ5ZXRvdCIsIkFsaWFzIjoieWV0b3QiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA2LTIyVDA5OjU4OjUxLjA1MTc0MzQ0M1oiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.AK5y3P3WJLroAwCR16VO_zgmQpm2hM41ojw9rboIADc"
+									},
+									{
+										"key": "client_time_zone",
+										"value": "Asia/Calcutta"
+									},
+									{
+										"key": "client_time_zone_offset",
+										"value": "+0530"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "cookie",
+										"value": "cookieyes-consent=consentid:SFhRRFgzMHliVW9KNkloTHEwbGRGYWVuSEVHZTk2UnI,consent:yes,action:no,necessary:yes,functional:yes,analytics:yes,performance:yes,advertisement:yes,other:yes; ph_phc_TXdpocbGVeZVm5VJmAsHTMrCofBQu3e0kN8HGMNGTVW_posthog=%7B%22distinct_id%22%3A%22018e3805-78a7-770a-9e4c-941511586048%22%2C%22%24sesid%22%3A%5B1718598567795%2C%2201902475-05de-7659-95be-26c4d4b6fbf6%22%2C1718598567389%5D%7D; __admin___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjQyLCJBY2NvdW50SWQiOjIzLCJBY2NvdW50VUlEIjoieWV0b3QiLCJBdXRoVHlwZSI6IiIsIlByb2plY3RJZCI6MjUsIlByb2plY3RVaWQiOiJ5ZXRvdCIsIkFsaWFzIjoieWV0b3QiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA2LTIyVDA5OjU4OjUxLjA1MTc0MzQ0M1oiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.AK5y3P3WJLroAwCR16VO_zgmQpm2hM41ojw9rboIADc"
+									},
+									{
+										"key": "mw_user_session_id",
+										"value": "CGMsgXN"
+									},
+									{
+										"key": "origin",
+										"value": "https://yetot.stage.env.middleware.io"
+									},
+									{
+										"key": "priority",
+										"value": "u=1, i"
+									},
+									{
+										"key": "referer",
+										"value": "https://yetot.stage.env.middleware.io/settings/ingestion-controls?from_ts=1723090320000&to_ts=1723093920000&range=1h"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Linux\""
+									},
+									{
+										"key": "sec-fetch-dest",
+										"value": "empty"
+									},
+									{
+										"key": "sec-fetch-mode",
+										"value": "cors"
+									},
+									{
+										"key": "sec-fetch-site",
+										"value": "same-origin"
+									},
+									{
+										"key": "user-agent",
+										"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"builderId\": 0,\n    \"label\": \"Get Attribute Values\",\n    \"scopeId\": 0,\n    \"widgetAppId\": 5,\n    \"builderConfig\": {\n        \"with\": [\n            {\n                \"key\": \"GLOBAL_ATTRIBUTE_FILTER\",\n                \"value\": {\n                    \"k8s.cluster.name\": {\n                        \"=\": \"minikube\"\n                    }\n                },\n                \"is_arg\": true\n            },\n            {\n                \"key\": \"SELECT_DATA_BY\",\n                \"value\": [\n                    \"k8s.namespace.name\"\n                ],\n                \"is_arg\": true\n            }\n        ],\n        \"columns\": [\n            \"k8s.namespace.name\"\n        ],\n        \"source\": {\n            \"name\": \"k8s.namespace\",\n            \"alias\": \"\",\n            \"dataset_id\": 0\n        }\n    },\n    \"builderViewOptions\": {},\n    \"params\": [\n        {\n            \"key\": \"from_ts\",\n            \"value\": 1722502078727\n        },\n        {\n            \"key\": \"to_ts\",\n            \"value\": 1723106878727\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}/builder/widget/data"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Third Party",
+			"item": [
+				{
+					"name": "getmsteamaccessurl",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/getmsteamaccessurl"
+					},
+					"response": []
+				},
+				{
+					"name": "getmsteamschannel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "client_time_zone",
+								"value": "Asia/Calcutta"
+							},
+							{
+								"key": "client_time_zone_offset",
+								"value": "+0530"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "__admin___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "mw_user_session_id",
+								"value": "Jabd9WP"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "https://dpluz.mw.lc/installation/integrations/ms-teams?from_ts=1724127720000&to_ts=1724131320000&range=1h&k8s=false"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+							}
+						],
+						"url": "{{URL}}/getmsteamschannel"
+					},
+					"response": []
+				},
+				{
+					"name": "removemsteamsauth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "client_time_zone",
+								"value": "Asia/Calcutta"
+							},
+							{
+								"key": "client_time_zone_offset",
+								"value": "+0530"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "__admin___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "mw_user_session_id",
+								"value": "XhijB2x"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "https://dpluz.mw.lc/installation/integrations/ms-teams?from_ts=1724130300000&to_ts=1724133900000&range=1h&k8s=false"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+							}
+						],
+						"url": "{{URL}}/removemsteamsauth"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "microsoft",
+			"item": [
+				{
+					"name": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "11111111-1111-1111-1111-111111111111",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "User.Read Mail.Read",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "M0ab92efe-b6fd-df08-87dc-2c6500a7f84d",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://localhost/myapp/",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "zHF8Q~Krjqh4r...",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJub25jZSI6ImM2MXY1aVpmSkVvaTJDTWU0Uk1kQTJ3bjk0YlFFUlNiREJyeVQxM0xyU0kiLCJhbGciOiJSUzI1NiIsIng1dCI6Ikg5bmo1QU9Tc3dNcGhnMVNGeDdqYVYtbEI5dyIsImtpZCI6Ikg5bmo1QU9Tc3dNcGhnMVNGeDdqYVYtbEI5dyJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zNWJlNTA1Ni0xNmYzLTQwYjktODZlYy1jMDMxODEzZmU0MzMvIiwiaWF0IjoxNzI1NDQ1NTczLCJuYmYiOjE3MjU0NDU1NzMsImV4cCI6MTcyNTQ4OTA3MywiYWNjdCI6MCwiYWNyIjoiMSIsImFpbyI6IkFWUUFxLzhYQUFBQWF3MGQ3UUNUbGQ0QVRuMFFadnlxWS9EVUVJNlU4WitvNmJobGVENERZUjVzOWZBakxkeVNCVzlsM3M0MGVidWZGZmY2WDBqb3ZJVGNkdmxYWnR3N3NlNVg1bkVLQzAyUGFiZTJZUThFZnNvPSIsImFtciI6WyJwd2QiLCJtZmEiXSwiYXBwX2Rpc3BsYXluYW1lIjoiTVctTVNUZWFtLWFsZXJ0IiwiYXBwaWQiOiJhNDBjY2Q0NC04NzIyLTRhNWMtOTI2ZC0yNzMwZmViMzgxYmEiLCJhcHBpZGFjciI6IjEiLCJmYW1pbHlfbmFtZSI6IlRlYW4iLCJnaXZlbl9uYW1lIjoiRGV2IiwiaWR0eXAiOiJ1c2VyIiwiaXBhZGRyIjoiMTAzLjE1Ni4xNDMuMTI2IiwibmFtZSI6IkRldiBUZWFuIiwib2lkIjoiZmQzYzQxMTEtYWQyMC00YTg4LTg1MTYtMDM3OGU4NjE3YjY3IiwicGxhdGYiOiI4IiwicHVpZCI6IjEwMDMyMDAyOTBDNTI5QkEiLCJyaCI6IjAuQVhFQVZsQy1OZk1XdVVDRzdNQXhnVF9rTXdNQUFBQUFBQUFBd0FBQUFBQUFBQURBQUU0LiIsInNjcCI6IkNoYW5uZWwuUmVhZEJhc2ljLkFsbCBDaGFubmVsTWVzc2FnZS5SZWFkLkFsbCBHcm91cC5SZWFkLkFsbCBHcm91cC5SZWFkV3JpdGUuQWxsIFRlYW0uUmVhZEJhc2ljLkFsbCBVc2VyLlJlYWQgVXNlci5SZWFkLkFsbCBXaW5kb3dzVXBkYXRlcy5SZWFkV3JpdGUuQWxsIHByb2ZpbGUgb3BlbmlkIGVtYWlsIiwic2lnbmluX3N0YXRlIjpbImttc2kiXSwic3ViIjoiaFhvUFRPR3BiZlR1TTdkUEZKQ01DNUVxTnhvc3YwYmp2UXdsMlN2emlfMCIsInRlbmFudF9yZWdpb25fc2NvcGUiOiJBUyIsInRpZCI6IjM1YmU1MDU2LTE2ZjMtNDBiOS04NmVjLWMwMzE4MTNmZTQzMyIsInVuaXF1ZV9uYW1lIjoiZGV2QG1pZGRsZXdhcmUuaW8iLCJ1cG4iOiJkZXZAbWlkZGxld2FyZS5pbyIsInV0aSI6ImN0OHJFVl9LeTAtb3A1ZXJ6azNxQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbIjMxZTkzOWFkLTk2NzItNDc5Ni05YzJlLTg3MzE4MTM0MmQyZCIsImQzN2M4YmVkLTA3MTEtNDQxNy1iYTM4LWI0YWJlNjZjZTRjMiIsIjM4YTk2NDMxLTJiZGYtNGI0Yy04YjZlLTVkM2Q4YWJhYzFhNCIsIjhhYzNmYzY0LTZlY2EtNDJlYS05ZTY5LTU5ZjRjN2I2MGViMiIsIjYyZTkwMzk0LTY5ZjUtNDIzNy05MTkwLTAxMjE3NzE0NWUxMCIsImZlOTMwYmU3LTVlNjItNDdkYi05MWFmLTk4YzNhNDlhMzhiMSIsIjI1ZGYzMzVmLTg2ZWItNDExOS1iNzE3LTBmZjAyZGUyMDdlOSIsIjE1OGMwNDdhLWM5MDctNDU1Ni1iN2VmLTQ0NjU1MWE2YjVmNyIsIjgzMjkxNTNiLTMxZDAtNDcyNy1iOTQ1LTc0NWViM2JjNWYzMSIsIjc0OTVmZGM0LTM0YzQtNGQxNS1hMjg5LTk4Nzg4Y2UzOTlmZCIsImU2ZDFhMjNhLWRhMTEtNGJlNC05NTcwLWJlZmM4NmQwNjdhNyIsImIwZjU0NjYxLTJkNzQtNGM1MC1hZmEzLTFlYzgwM2YxMmVmZSIsIjcyOTgyN2UzLTljMTQtNDlmNy1iYjFiLTk2MDhmMTU2YmJiOCIsIjMyNjk2NDEzLTAwMWEtNDZhZS05NzhjLWNlMGY2YjM2MjBkMiIsImNmMWMzOGU1LTM2MjEtNDAwNC1hN2NiLTg3OTYyNGRjZWQ3YyIsImViMWY0YThkLTI0M2EtNDFmMC05ZmJkLWM3Y2RmNmM1ZWY3YyIsImZkZDdhNzUxLWI2MGItNDQ0YS05ODRjLTAyNjUyZmU4ZmExYyIsImJlMmY0NWExLTQ1N2QtNDJhZi1hMDY3LTZlYzFmYTYzYmM0NSIsImU4NjExYWI4LWMxODktNDZlOC05NGUxLTYwMjEzYWIxZjgxNCIsIjExNDUxZDYwLWFjYjItNDVlYi1hN2Q2LTQzZDBmMDEyNWMxMyIsIjI5MjMyY2RmLTkzMjMtNDJmZC1hZGUyLTFkMDk3YWYzZTRkZSIsIjA1MjY3MTZiLTExM2QtNGMxNS1iMmM4LTY4ZTNjMjJiOWY4MCIsIjY5MDkxMjQ2LTIwZTgtNGE1Ni1hYTRkLTA2NjA3NWIyYTdhOCIsIjVmMjIyMmIxLTU3YzMtNDhiYS04YWQ1LWQ0NzU5ZjFmZGU2ZiIsIjliODk1ZDkyLTJjZDMtNDRjNy05ZDAyLWE2YWMyZDVlYTVjMyIsIjc2OThhNzcyLTc4N2ItNGFjOC05MDFmLTYwZDZiMDhhZmZkMiIsIjMxMzkyZmZiLTU4NmMtNDJkMS05MzQ2LWU1OTQxNWEyY2M0ZSIsIjNkNzYyYzVhLTFiNmMtNDkzZi04NDNlLTU1YTNiNDI5MjNkNCIsIjExNjQ4NTk3LTkyNmMtNGNmMy05YzM2LWJjZWJiMGJhOGRjYyIsIjk1ZTc5MTA5LTk1YzAtNGQ4ZS1hZWUzLWQwMWFjY2YyZDQ3YiIsIjE5NGFlNGNiLWIxMjYtNDBiMi1iZDViLTYwOTFiMzgwOTc3ZCIsImI1YThkY2YzLTA5ZDUtNDNhOS1hNjM5LThlMjllZjI5MTQ3MCIsImYyOGExZjUwLWY2ZTctNDU3MS04MThiLTZhMTJmMmFmNmI2YyIsImIxYmUxYzNlLWI2NWQtNGYxOS04NDI3LWY2ZmEwZDk3ZmViOSIsIjkyYjA4NmIzLWUzNjctNGVmMi1iODY5LTFkZTEyOGZiOTg2ZSIsIjRkNmFjMTRmLTM0NTMtNDFkMC1iZWY5LWEzZTBjNTY5NzczYSIsIjJiNzQ1YmRmLTA4MDMtNGQ4MC1hYTY1LTgyMmM0NDkzZGFhYyIsImZjZjkxMDk4LTAzZTMtNDFhOS1iNWJhLTZmMGVjODE4OGExMiIsImJhZjM3YjNhLTYxMGUtNDVkYS05ZTYyLWQ5ZDFlNWU4OTE0YiIsIjNhMmM2MmRiLTUzMTgtNDIwZC04ZDc0LTIzYWZmZWU1ZDlkNSIsImYwMjNmZDgxLWE2MzctNGI1Ni05NWZkLTc5MWFjMDIyNjAzMyIsImE5ZWE4OTk2LTEyMmYtNGM3NC05NTIwLThlZGNkMTkyODI2YyIsIjk2NjcwN2QwLTMyNjktNDcyNy05YmUyLThjM2ExMGYxOWI5ZCIsIjA5NjRiYjVlLTliZGItNGQ3Yi1hYzI5LTU4ZTc5NDg2MmE0MCIsIjdiZTQ0YzhhLWFkYWYtNGUyYS04NGQ2LWFiMjY0OWUwOGExMyIsIjg5MmM1ODQyLWE5YTYtNDYzYS04MDQxLTcyYWEwOGNhM2NmNiIsImUzMDBkOWU3LTRhMmItNDI5NS05ZWZmLWYxYzc4YjM2Y2M5OCIsIjQ1ZDhkM2M1LWM4MDItNDVjNi1iMzJhLTFkNzBiNWUxZTg2ZSIsImM0ZTM5YmQ5LTExMDAtNDZkMy04YzY1LWZiMTYwZGEwMDcxZiIsImY3MDkzOGEwLWZjMTAtNDE3Ny05ZTkwLTIxNzhmODc2NTczNyIsIjQ0MzY3MTYzLWViYTEtNDRjMy05OGFmLWY1Nzg3ODc5Zjk2YSIsImYyZWY5OTJjLTNhZmItNDZiOS1iN2NmLWExMjZlZTc0YzQ1MSIsImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdLCJ4bXNfaWRyZWwiOiIxMiAxIiwieG1zX3N0Ijp7InN1YiI6InNDVFpWN0RZZVA3MDkyV2JJRWczVGVOdkp4SHBROXk1cjVOVGl1LXBGODQifSwieG1zX3RjZHQiOjE2MjUzODQzNDh9.g286l0Yi3PO7FxuQop9kUvXiBctNxop3OdgtxYP-9_QLDiAQSKsSV3-nwuGuJoXKMUEg25oMUvIm9c0zXW7167F_-KNID1KX12SesaYKj9JkxqLh0zHH-xAbeHQ5OPSyabG8_cKCd8DIxP3N2ZEMySQn2ZG8XX7oO0A_Yy_s50a03Ra2rKZ_FAfmfc47wF28CmInqioWtCcaXZz53qG_7AjZ4UyqyhriGwsgfoYJb5Jp8eGud6QuGToA9cld1w0AZvkxs1bYm1m-W2HSHtsyhztKK4C3pu_wuRFDpkinY1ZYWlXlvkSfAPA5uwZevgu6utfZ_amFdTNS8DozpA_-iw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://graph.microsoft.com/v1.0/me"
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "a40ccd44-8722-4a5c-926d-2730feb381ba",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "https://graph.microsoft.com/.default",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "0.AXEAVlC-NfMWuUCG7MAxgT_kM0TNDKQih1xKkm0nMP6zgbrAAE4.AgABAwEAAAApTwJmzXqdR4BN2miheQMYAwDs_wUA9P8NjDrD0nDXU-9tTGkfJ1c3GutM4WDVWGtZB2ysVlJJzDD7GcxUMT27Uw7wSUxKsAD3SaRWogeah5L40qLdix7gsKP729o7EtIE6ZVnTaU0GM491O7cMPdW4n8dY4YbJ49l-TJ4eVpsfgKAhdnp5kcWqZkX4NX1A2Ds3Uac5MRNPd_1imLhzMEqBv49i_4ADivU1FB_up5FRwwWkQiAnAu3P_VJyPUGNkKxKzIhwD-6adSKlGMirLT8FZRysyQ2dMGTM0UHRPo7zG-9AyHb7dvV92ECUk4-i-Bsio79Z7wI7bX2k-00heV5YKgZGDXThl5GG6D5hHOSgpwHhUOzpDcnqZwFQs6glnwilxEAbihOm30eSYwAAqGO_28-2lFgMpbsRXyecL6QFuyNaqErQSMtb1oWH8wtRwYS3UeXGcNB1OSBO_tYngUXeaz-c6DLmmsNCMz5QHIXaExRWa4qpztAi80k3sOPZtJ49Xn0qp4qut9iHpYiw2lC1_o5fQIKXIixesIHsusj3WJs_QGnu4BeSZx4YUcWODINITbOyhnF-5h3gmigadkH5-9HAZyZBP2vFOwLaev0zYVNx48zpXSQxPAfm2WGK7ZLmVVfVCm7BKQ7u4AnqKPiAj8ty2CVnSswmd2NAjCTOEv5KBiwF8BLxtkju312R8Oeh7OmNpI50wY2XN98tj7puXEqjkr7nR3YtWLzdkm571Q6KGNMJfRpwdTGnvuPGrDLDKa-bKrRYmHxeu5J_yZZ1jIyaVMHFKIXSIki94MTsO0yhg",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "a4s8Q~S52UdpjN80fVevRgxeKuRFEi5KfmPWQbWa",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rules",
+			"item": [
+				{
+					"name": "rules",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "client_time_zone",
+								"value": "Asia/Calcutta"
+							},
+							{
+								"key": "client_time_zone_offset",
+								"value": "+0530"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "__admin___user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjEsIkFjY291bnRJZCI6MSwiQWNjb3VudFVJRCI6ImRwbHV6IiwiQXV0aFR5cGUiOiIiLCJQcm9qZWN0SWQiOjEsIlByb2plY3RVaWQiOiJkcGx1eiIsIkFsaWFzIjoiZHBsdXoiLCJEQiI6ImRiMSIsIlRpbWUiOiIyMDI0LTA1LTA4VDExOjAyOjIyLjYyODM0NzY3NFoiLCJpc3MiOiJtd19fbG9naW4iLCJzdWIiOiJsb2dpbiJ9.Oiuif77ZJ7t9pi4WslwjZqEqIQSyYYrubCPA4cOCHoo"
+							},
+							{
+								"key": "mw_user_session_id",
+								"value": "ULkc0vb"
+							},
+							{
+								"key": "origin",
+								"value": "https://dpluz.mw.lc"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "https://dpluz.mw.lc/alert/rules?from_ts=1724144220000&to_ts=1724147820000&range=1h&page=1"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"type\": \"metric\",\n    \"resource\": \"\",\n    \"frequency\": \"multiple\",\n    \"tags\": [],\n    \"time_window\": 300,\n    \"eval\": \"\",\n    \"columns\": [],\n    \"conditions\": [\n        {\n            \"status\": 100,\n            \"threshold\": 0,\n            \"operator\": \">\",\n            \"isChecked\": true\n        },\n        {\n            \"status\": 200,\n            \"threshold\": 0,\n            \"operator\": \">\",\n            \"isChecked\": true\n        }\n    ],\n    \"filters\": {},\n    \"notification_setting\": {\n        \"type\": \"MicrosoftTeams\",\n        \"channels\": [\n            \"a86a99db-3da0-4208-8674-7072454e7c12##::##19:e6651afc47db4616a15c55136fc196fe@thread.tacv2\",\n            \"a86a99db-3da0-4208-8674-7072454e7c12##::##19:PU-RCCqaFsJUGelqZqdJiDaNfrlgMWQyphsa3BOwH2Y1@thread.tacv2\"\n        ],\n        \"addresses\": [],\n        \"multiple\": false\n    },\n    \"group_by\": [],\n    \"unit\": \"\",\n    \"billing_unit\": \"\",\n    \"datapoint_count\": 1,\n    \"resolved_notify\": false,\n    \"meta\": {\n        \"aggregated\": 30,\n        \"diff\": false\n    },\n    \"config\": [\n        {\n            \"with\": [],\n            \"columns\": [\n                \"avg(time_spent,value(avg))\"\n            ],\n            \"source\": {\n                \"name\": \"trace\",\n                \"alias\": \"\",\n                \"dataset_id\": 0\n            },\n            \"key\": \"a\"\n        }\n    ],\n    \"formulas\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/rules"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Collaboration",
+			"item": [
+				{
+					"name": "getopsgenielist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/task_management/getopsgenielist"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "elasticsearch",
+			"item": [
+				{
+					"name": "add data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Apple Macbook Air M2\",\n    \"price\": 1449.0,\n    \"in_stock\": true,\n    \"description\": \"Apple 2024 MacBook Air 15-inch Laptop with M2 chip, 16GB Unified Memory, 512GB SSD Storage, Space Gray\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:9200/products/_doc"
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\":{\n        \"match\": {\n            \"description\": \"apple\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:9200/products/_search"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
